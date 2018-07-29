@@ -7,7 +7,7 @@ import named from 'vinyl-named';
 import livereload from 'gulp-livereload';
 import plumber from 'gulp-plumber';
 import rename from 'gulp-rename';
-import gulify from 'gulp-uglify';
+import uglify from 'gulp-uglify';
 import {log, colors} from 'gulp-util';
 import args from './util/args';
 
@@ -21,9 +21,9 @@ gulp.task('scripts', () => {
     .pipe(named())
     .pipe(gulpWebpack({
       module: {
-        loaders: [{
+        rules: [{
           test: /\.js$/,
-          loader: 'babel'
+          loader: 'babel-loader'
         }]
       }
     }), null, (err, stats) => {
