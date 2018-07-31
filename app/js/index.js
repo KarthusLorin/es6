@@ -1,1 +1,1 @@
-import './class/let&const'
+import './class/destructuring-assignment'
