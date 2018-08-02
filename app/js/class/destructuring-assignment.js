@@ -42,12 +42,32 @@
 
   let a, b;
   [a, b] = f();
-  console.log(a, b)
+  console.log(a, b)     // 1 2
 }
 
 {
-  // 对象解构
+  // 对象解构——基本
   let a, b;
   ({a, b} = {a: 1, b: 2})
-  console.log(a, b)
+  console.log(a, b)     // 1 2
+}
+
+{
+  // 对象解构——默认赋值
+  let {a = 10, b = 5} = {a: 3};
+  console.log(a, b)     // 3 5
+}
+
+{
+  // 对象解构——嵌套对象解构，注意左侧是key，右侧是你命名的对象
+  let metaData = {
+    title: 'abc',
+    test: [{
+      title: 'test',
+      desc: 'description'
+    }]
+  }
+  // 其实就是做了两层的对象解构
+  let {title: esTitle, test: [{title: cnTitle}]} = metaData;
+  console.log(esTitle, cnTitle)       // 'abc'  'test'
 }
