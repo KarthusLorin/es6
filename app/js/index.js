@@ -1,1 +1,2 @@
-import './class/destructuring-assignment'
+import 'babel-polyfill'
+import './class/string'
