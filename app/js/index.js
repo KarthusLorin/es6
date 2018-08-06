@@ -1,2 +1,2 @@
 import 'babel-polyfill'
-import './class/function'
+import './class/object'
