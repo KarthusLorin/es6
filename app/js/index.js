@@ -1,2 +1,2 @@
 import 'babel-polyfill'
-import './class/symbol'
+import './class/map&set'
