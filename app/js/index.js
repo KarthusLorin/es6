@@ -1,2 +1,2 @@
 import 'babel-polyfill'
-import './class/class'
+import './class/promise'
