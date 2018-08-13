@@ -1,2 +1,2 @@
 import 'babel-polyfill'
-import './class/generator'
+import './class/decorator'
